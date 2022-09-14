@@ -1,0 +1,37 @@
+div .AllBeers {
+    display:flex;
+    flex-flow: column;
+    width: 50vw;
+    justify-content: center;
+    text-align: left;
+    margin:12vh auto;
+}
+
+div .AllBeers h1 {
+    text-align: center;
+}
+
+div .AllBeers a {
+    text-decoration: none;
+    color:black;
+}
+
+hr {
+    color: lightgrey;
+}
+
+.div-beer {
+    display: flex;
+    flex-flow: row;
+    margin: 30px 0px;
+}
+
+.image {
+    display: flex;
+    align-content: center;
+}
+
+.image img {
+    max-width : 150px;
+    max-height : 150px;
+}
