@@ -10,26 +10,31 @@ import NewBeer from './components/NewBeer';
 
 function App() {
   const [beers, setBeers] = useState([])
-
+  
   useEffect(() => {
-  const config = {
+    const config = {
       method: 'get',
       url: 'https://ih-beers-api2.herokuapp.com/beers',
       headers: { }
-  };
-  
-  axios(config)
-  .then(function (response) {
-      console.log(JSON.stringify(response.data));
+    };
+    
+    axios(config)
+    .then(function (response) {
+      //console.log(JSON.stringify(response.data));
       setBeers(response.data)
   })
   .catch(function (error) {
       console.log(error);
   })}, [])
 
+  
   const addBeer = (newBeer) => {
-    setBeers({...beers, newBeer})
+    setBeers([...beers, newBeer])
+    console.log("NEW BEER")
   }
+  
+  // if(!beers.length) return <p>Loading ...</p>
+
 
   return (
     <div className="App">

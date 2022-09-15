@@ -5,7 +5,6 @@ import BeerDetails from './BeerDetails';
 
 
 function AllBeers({beers}) {
-    if(!beers.length) return <p>Loading...</p>
     return (
         <>
         <Header/>

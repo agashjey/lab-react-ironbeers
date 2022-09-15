@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Header from './Header'
+import './NewBeer.css'
 
 const NewBeer = ({addBeer}) => {
     const initialState = {
@@ -13,16 +14,15 @@ const NewBeer = ({addBeer}) => {
         contributed_by:""
     }
 
-
-
     const [newBeer, setNewBeer] = useState(initialState);
+    
     const handleChange = (e) => {
         setNewBeer({...newBeer, [e.target.id]: e.target.value})
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addBeer(newBeer)
+        addBeer(newBeer);
         setNewBeer(initialState);
     }
 

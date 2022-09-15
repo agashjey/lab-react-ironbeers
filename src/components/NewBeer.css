@@ -1,0 +1,13 @@
+form {
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+form input {
+    margin-bottom:10px
+}
+
+form label {
+    text-align: left;
+}

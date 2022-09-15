@@ -6,7 +6,6 @@ const RandomBeer = ({beers}) => {
     if(!beers.length) return <p>Loading ...</p>
 
     const randomId = parseInt(Math.random()*beers.length)
-    console.log(randomId)
     const randomBeer = beers[randomId]
 
   return (
